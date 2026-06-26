@@ -1,0 +1,14 @@
+# 真实配置（含个人邮箱），不提交
+config.env
+
+# 运行日志
+*.log
+weekly_trending.log
+
+# Python
+__pycache__/
+*.pyc
+
+# 本地工具/系统
+.claude/
+.DS_Store
