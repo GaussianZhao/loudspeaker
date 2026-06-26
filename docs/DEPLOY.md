@@ -8,13 +8,15 @@ Top 10，含中文一句话简介（由本机 Claude CLI 生成）。
 
 ---
 
-## 0. 拷贝文件到 Mac mini
+## 0. 把仓库拉到 Mac mini
 
-把这三个文件放到 Mac mini 的同一个目录（示例用 `~/weekly-trending/`）：
+```bash
+git clone https://github.com/<你的用户名>/loudspeaker.git
+cd loudspeaker
+```
 
-- `weekly_github_trending.py`  — 主脚本
-- `install_launchagent.sh`     — 定时任务安装脚本
-- `DEPLOY.md`                  — 本文档
+后续命令都在这个目录里执行（`weekly_github_trending.py`、`install_launchagent.sh`、
+`config.env.example` 都在根目录）。
 
 ---
 
@@ -43,7 +45,7 @@ claude -p "说: 你好"            # 能正常输出即说明 CLI 可用
 ## 3. 填配置
 
 ```bash
-cd ~/weekly-trending            # 文件所在目录
+cd loudspeaker                  # 仓库目录
 cp config.env.example config.env
 vi config.env                   # 至少把 RECIPIENT 改成你的收件邮箱
 ```
